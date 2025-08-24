@@ -18,6 +18,10 @@ dataBase = mysql.connector.connect(
 cursorObject = dataBase.cursor()
 
 # Create a database
-cursorObject.execute("CREATE DATABASE BANKING")
+# cursorObject.execute("CREATE DATABASE BANKING")
+
+cursorObject.execute("use BANKING")
+
+cursorObject.execute("select * from api_transaction")
 
 print("All Done!")
